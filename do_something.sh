@@ -13,3 +13,5 @@ done
 
 echo
 cat $file
+
+bash step2.sh
