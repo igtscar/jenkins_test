@@ -1,7 +1,15 @@
 #!/bin/sh
 
-file=secrets.txt
+file="random.dat"
+
+echo Writing random UUID to $file
+echo
 
 for i in {1..20}; do
-	uuidgen >> $file
+	uuid=$(uuidgen)
+	echo [$i] $uuid
+	echo "$uuid" >> $file
 done
+
+echo
+cat $file
